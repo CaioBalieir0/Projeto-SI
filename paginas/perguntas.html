@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-dark text-white">
+	<nav class="navbar navbar-expand-lg bg-danger-subtle" data-bs-theme="dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../index.html" style="width: 4%;"><img src="../img/logopng.png" alt="" class="rounded-circle img-logo"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="../index.html#pesquisa">Pesquisa</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="clientes.html">Gráfico de satisfação</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../index.html#sobreNos">Sobre nós</a>
+					</li>
+					<li class="nav-item">
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+		 <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+			<div id="perguntaNome" class="text-center border border-danger p-5 rounded-4">
+				<h3>Digite seu nome</h3>
+				<input type="text" name="" id="inpNome" class="form-control mt-3" placeholder="Ex: João Silva">
+				<button onclick="proxNome()" id="btnPrxmNome" class="btn btn-danger my-3 text-center mudaCorBtn">Próximo</button>
+			</div>
+
+    <div id="pergunta01" class="d-none text-center border border-danger p-5 rounded-4">
+			<h3>Tempo de atendimento</h3>
+			<p></p>
+			<div class="container-alternativa">
+				<input type="radio" value="0" class="alternativa form-check-input input-color" name="alternativaPg1" id="alternativa01p1"> <label for="alternativa01p1" class="form-check-label">Ruim <i class="bi bi-emoji-angry" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>			
+			<div class="container-alternativa">
+				<input type="radio" value="40" class="alternativa form-check-input input-color" name="alternativaPg1" id="alternativa02p1"> <label for="alternativa02p1" class="form-check-label">Regular<i class="bi bi-emoji-neutral" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="60" class="alternativa form-check-input input-color" name="alternativaPg1" id="alternativa03p1"> <label for="alternativa03p1" class="form-check-label">Bom <i class="bi bi-emoji-smile"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="80" class="alternativa form-check-input input-color" name="alternativaPg1" id="alternativa04p1"> <label for="alternativa04p1" class="form-check-label">Muito bom<i class="bi bi-emoji-laughing"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="100" class="alternativa form-check-input input-color" name="alternativaPg1" id="alternativa05p1"> <label for="alternativa05p1" class="form-check-label">Ótimo<i class="bi bi-emoji-sunglasses"style="font-size: 18px; padding: 0 5px;"></i></label><br>
+			</div>
+			<button onclick="voltarPerg01()" class="btn btn-danger my-3 text-center" id="btnVoltar01">Voltar</button>
+			<button onclick="proxPerg01()" class="btn btn-danger my-3 text-center  mudaCorBtn" id="btnPrxm01">Próxima</button>
+		</div>
+		
+		<div id="pergunta02" class="d-none text-center border border-danger p-5 rounded-4">
+			<h3>Educação do vendedor</h3>
+			<p></p>
+			<div class="container-alternativa">
+				<input type="radio" value="0" class="alternativa form-check-input input-color" name="alternativaPg2" id="alternativa01p2"> <label for="alternativa01p2" class="form-check-label">Ruim <i class="bi bi-emoji-angry" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="40" class="alternativa form-check-input input-color" name="alternativaPg2" id="alternativa02p2"> <label for="alternativa02p2" class="form-check-label">Regular<i class="bi bi-emoji-neutral" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="60" class="alternativa form-check-input input-color" name="alternativaPg2" id="alternativa03p2"> <label for="alternativa03p2" class="form-check-label">Bom <i class="bi bi-emoji-smile"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="80" class="alternativa form-check-input input-color" name="alternativaPg2" id="alternativa04p2"> <label for="alternativa04p2" class="form-check-label">Muito bom<i class="bi bi-emoji-laughing"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="100" class="alternativa form-check-input input-color" name="alternativaPg2" id="alternativa05p2"> <label for="alternativa05p2" class="form-check-label">Ótimo<i class="bi bi-emoji-sunglasses"style="font-size: 18px; padding: 0 5px;"></i></label><br>
+			</div>
+			<button onclick="voltarPerg02()" class="btn btn-danger my-3 text-center" id="btnVoltar02">Voltar</button>
+			<button onclick="proxPerg02()" class="btn btn-danger my-3 text-center mudaCorBtn" id="btnPrxm02">Próxima</button>
+			
+		</div>
+		<div id="pergunta03" class="d-none text-center border border-danger p-5 rounded-4">
+			<h3>Clareza das informações prestadas</h3>
+			<p></p>
+			<div class="container-alternativa">
+				<input type="radio" value="0" class="alternativa form-check-input input-color" name="alternativaPg3" id="alternativa01p3"> <label for="alternativa01p3" class="form-check-label">Ruim <i class="bi bi-emoji-angry" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="40" class="alternativa form-check-input input-color" name="alternativaPg3" id="alternativa02p3"> <label for="alternativa02p3" class="form-check-label">Regular<i class="bi bi-emoji-neutral" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="60" class="alternativa form-check-input input-color" name="alternativaPg3" id="alternativa03p3"> <label for="alternativa03p3" class="form-check-label">Bom <i class="bi bi-emoji-smile"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="80" class="alternativa form-check-input input-color" name="alternativaPg3" id="alternativa04p3"> <label for="alternativa04p3" class="form-check-label">Muito bom<i class="bi bi-emoji-laughing"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="100" class="alternativa form-check-input input-color" name="alternativaPg3" id="alternativa05p3"> <label for="alternativa05p3" class="form-check-label">Ótimo<i class="bi bi-emoji-sunglasses"style="font-size: 18px; padding: 0 5px;"></i></label><br>
+			</div>		
+			<button onclick="voltarPerg03()" class="btn btn-danger my-3 text-center" id="btnVoltar03">Voltar</button>
+			<button onclick="proxPerg03()" class="btn btn-danger my-3 text-center  mudaCorBtn" id="btnPrxm03">Próxima</button>
+			
+		</div>
+
+		<div id="pergunta04" class="d-none text-center border border-danger p-5 rounded-4">
+			<h3>Instruções claras e corretas sobre a entrega</h3>
+			<p></p>
+			<div class="container-alternativa">
+				<input type="radio" value="0" class="alternativa form-check-input input-color" name="alternativaPg4" id="alternativa01p4"> <label for="alternativa01p4" class="form-check-label">Ruim <i class="bi bi-emoji-angry" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="40" class="alternativa form-check-input input-color" name="alternativaPg4" id="alternativa02p4"> <label for="alternativa02p4" class="form-check-label">Regular<i class="bi bi-emoji-neutral" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="60" class="alternativa form-check-input input-color" name="alternativaPg4" id="alternativa03p4"> <label for="alternativa03p4" class="form-check-label">Bom <i class="bi bi-emoji-smile"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="80" class="alternativa form-check-input input-color" name="alternativaPg4" id="alternativa04p4"> <label for="alternativa04p4" class="form-check-label">Muito bom<i class="bi bi-emoji-laughing"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="100" class="alternativa form-check-input input-color" name="alternativaPg4" id="alternativa05p4"> <label for="alternativa05p4" class="form-check-label">Ótimo<i class="bi bi-emoji-sunglasses"style="font-size: 18px; padding: 0 5px;"></i></label><br>
+			</div>
+		
+		
+			
+			
+			
+			<button onclick="voltarPerg04()" class="btn btn-danger my-3 text-center" id="btnVoltar04">Voltar</button>
+			<button onclick="proxPerg04()" class="btn btn-danger my-3 text-center  mudaCorBtn" id="btnPrxm04">Próxima</button>
+			
+		</div>
+		<div id="pergunta05" class="d-none text-center border border-danger p-5 rounded-4">
+			<h3>Instruções claras e corretas sobre a montagem</h3>
+			<p></p>
+			<div class="container-alternativa">
+				<input type="radio" value="0" class="alternativa form-check-input input-color" name="alternativaPg5" id="alternativa01p5"> <label for="alternativa01p5" class="form-check-label">Ruim <i class="bi bi-emoji-angry" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="40" class="alternativa form-check-input input-color" name="alternativaPg5" id="alternativa02p5"> <label for="alternativa02p5" class="form-check-label">Regular<i class="bi bi-emoji-neutral" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="60" class="alternativa form-check-input input-color" name="alternativaPg5" id="alternativa03p5"> <label for="alternativa03p5" class="form-check-label">Bom <i class="bi bi-emoji-smile"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="80" class="alternativa form-check-input input-color" name="alternativaPg5" id="alternativa04p5"> <label for="alternativa04p5" class="form-check-label">Muito bom<i class="bi bi-emoji-laughing"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="100" class="alternativa form-check-input input-color" name="alternativaPg5" id="alternativa05p5"> <label for="alternativa05p5" class="form-check-label">Ótimo<i class="bi bi-emoji-sunglasses"style="font-size: 18px; padding: 0 5px;"></i></label><br>
+			</div>
+			<button onclick="voltarPerg05()" class="btn btn-danger my-3 text-center" id="btnVoltar05">Voltar</button>
+			<button onclick="proxPerg05()" class="btn btn-danger my-3 text-center  mudaCorBtn" id="btnPrxm05">Próxima</button>
+			
+		</div>
+
+		<div id="pergunta06" class="d-none text-center border border-danger p-5 rounded-4">
+			<h3>Atendimento do entregador</h3>
+			<p></p>
+			<div class="container-alternativa">
+				<input type="radio" value="0" class="alternativa form-check-input input-color" name="alternativaPg6" id="alternativa01p6"> <label for="alternativa01p6" class="form-check-label">Ruim <i class="bi bi-emoji-angry" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="40" class="alternativa form-check-input input-color" name="alternativaPg6" id="alternativa02p6"> <label for="alternativa02p6" class="form-check-label">Regular<i class="bi bi-emoji-neutral" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="60" class="alternativa form-check-input input-color" name="alternativaPg6" id="alternativa03p6"> <label for="alternativa03p6" class="form-check-label">Bom <i class="bi bi-emoji-smile"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="80" class="alternativa form-check-input input-color" name="alternativaPg6" id="alternativa04p6"> <label for="alternativa04p6" class="form-check-label">Muito bom<i class="bi bi-emoji-laughing"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="100" class="alternativa form-check-input input-color" name="alternativaPg6" id="alternativa05p6"> <label for="alternativa05p6" class="form-check-label">Ótimo<i class="bi bi-emoji-sunglasses"style="font-size: 18px; padding: 0 5px;"></i></label><br>
+			</div>
+		
+			<button onclick="voltarPerg06()" class="btn btn-danger my-3 text-center" id="btnVoltar06">Voltar</button>
+			<button onclick="proxPerg06()" class="btn btn-danger my-3 text-center  mudaCorBtn" id="btnPrxm06">Próxima</button>
+			
+		</div>
+
+		<div id="pergunta07" class="d-none text-center border border-danger p-5 rounded-4">
+			<h3>Conformidade da entrega</h3>
+			<p></p>
+			<div class="container-alternativa">
+				<input type="radio" value="0" class="alternativa form-check-input input-color" name="alternativaPg7" id="alternativa01p7"> <label for="alternativa01p7" class="form-check-label">Ruim <i class="bi bi-emoji-angry" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="40" class="alternativa form-check-input input-color" name="alternativaPg7" id="alternativa02p7"> <label for="alternativa02p7" class="form-check-label">Regular<i class="bi bi-emoji-neutral" style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="60" class="alternativa form-check-input input-color" name="alternativaPg7" id="alternativa03p7"> <label for="alternativa03p7" class="form-check-label">Bom <i class="bi bi-emoji-smile"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="80" class="alternativa form-check-input input-color" name="alternativaPg7" id="alternativa04p7"> <label for="alternativa04p7" class="form-check-label">Muito bom<i class="bi bi-emoji-laughing"style="font-size: 18px; padding: 0 5px;"></i></label>
+			</div>
+			<div class="container-alternativa">
+				<input type="radio" value="100" class="alternativa form-check-input input-color" name="alternativaPg7" id="alternativa05p7"> <label for="alternativa05p7" class="form-check-label">Ótimo<i class="bi bi-emoji-sunglasses"style="font-size: 18px; padding: 0 5px;"></i></label><br>
+			</div>
+			<button onclick="voltarPerg07()" class="btn btn-danger my-3 text-center" id="btnVoltar07">Voltar</button>
+			<button onclick="proxPerg07()" class="btn btn-danger my-3 text-center mudaCorBtn" id="btnPrxm07">Finalizar</button>
+		</div>
+
+		<d<div id="resultado" class=" text-center border border-danger p-5 rounded-4 d-none">
+			<h3 class="display-6">Obrigado pela contribuição!</h3>
+			<p>Suas respostas serão utilizadas para melhorar nosso sistema.</p>
+			<h5>Sua pontuação: </h5>
+			<span id="pontuacao"></span><br>
+			<table class="table table-dark table-bordered table-hover table-striped my-4">
+				<thead>
+					<tr>
+						<th scope="col">Pontos</th>
+						<th scope="col">Grau de satisfação</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>De 0 a 280</td>
+						<td>Insatisfeito</td>
+					</tr>
+					<tr>
+						<td>Acima de 280 a 420</td>
+						<td>Satisfação Média</td>
+					</tr>
+					<tr>
+						<td>Acima de 420</td>
+						<td>Satisfeito</td>
+					</tr>
+					
+				</tbody>
+			</table>
+			<a href="../index.html" class="btn btn-danger">Página Inicial</a>
+		</div>
+		</div>
+		</div>
+		
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.bg-img {
+  background-image: url(../img/bg-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+.input-color:checked {
+  background-color: #dc3545;
+  border: #dc3545;
+}
+
+.input-color:focus {
+  box-shadow: rgba(220, 53, 69, 0.5) 0px 0px 0.25rem;
+}
+
+.nav-link:hover {
+  color: #dc3545 !important;
+}
+
+.img-logo {
+  width: 100%;
+}
+
+button:hover {
+  background-color: rgb(243, 82, 19) !important;
+  transition: 0.3s;
+}
+
+.container-alternativa {
+  display: flex;
+  padding: 5px;
+}
+
+.container-alternativa label {
+  padding: 0 10px;
+}
+
+#pergunta01 button {
+  width: 40%;
+}
+
+footer {
+  background: #2c0b0e;
+}
