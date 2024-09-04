@@ -28,46 +28,28 @@ let botaoVoltar05 = document.querySelector("#btnVoltar05");
 let botaoVoltar06 = document.querySelector("#btnVoltar06");
 let botaoVoltar07 = document.querySelector("#btnVoltar07");
 
-// botaoProx00.addEventListener("click", proxNome);
-// botaoProx01.addEventListener("click", proxPerg01);
-// botaoProx02.addEventListener("click", proxPerg02);
-// botaoProx03.addEventListener("click", proxPerg03);
-// botaoProx04.addEventListener("click", proxPerg04);
-// botaoProx05.addEventListener("click", proxPerg05);
-// botaoProx06.addEventListener("click", proxPerg06);
-// botaoProx07.addEventListener("click", proxPerg07);
-
-// botaoVoltar01.addEventListener("click", voltarPerg01);
-// botaoVoltar02.addEventListener("click", voltarPerg02);
-// botaoVoltar03.addEventListener("click", voltarPerg03);
-// botaoVoltar04.addEventListener("click", voltarPerg04);
-// botaoVoltar05.addEventListener("click", voltarPerg05);
-// botaoVoltar06.addEventListener("click", voltarPerg06);
-// botaoVoltar07.addEventListener("click", voltarPerg07);
-let nomeExiste = false
+let nomeExiste = false;
 let radioMarcado;
 function proxNome() {
   if (inpNome.value == "") {
     alert("Digite o nome corretamente");
   } else {
-    for (let i = 0 ; i <= localStorage.length ; i++) {
-      let key = localStorage.key(i)
+    for (let i = 0; i <= localStorage.length; i++) {
+      let key = localStorage.key(i);
 
-      if(key == inpNome.value) {
-        nomeExiste = true
+      if (key == inpNome.value) {
+        nomeExiste = true;
       }
     }
     if (!nomeExiste) {
-      
       let elementoPai = botaoProx00.parentElement;
       let perguntaSequente = document.querySelector("#pergunta01");
       perguntaSequente.classList.remove("d-none");
       perguntaSequente.classList.add("d-block");
       elementoPai.classList.add("d-none");
     } else {
-      nomeExiste = false
-      alert("Nome já cadastrado!")
- 
+      nomeExiste = false;
+      alert("Nome já cadastrado!");
     }
   }
 }
@@ -95,8 +77,7 @@ function proxPerg01() {
     let perguntaSequente = document.querySelector("#pergunta02");
     perguntaSequente.classList.remove("d-none");
     perguntaSequente.classList.add("d-block");
-    
-    
+
     elementoPai.classList.add("d-none");
   } else {
     alert("Marque alguma das alternativas");
@@ -170,11 +151,6 @@ function proxPerg07() {
     let elementoPai = botaoProx07.parentElement;
     let telaResultado = resultado;
     localStorage.setItem(inpNome.value, somaPontuacao);
-    // for (let i = 0; i <= localStorage.length; i++) {
-    //   const key = localStorage.key(i);
-    //   const valor = localStorage.getItem(key);
-    //   mostraNaTabela(key, valor);
-    // }
     telaResultado.classList.remove("d-none");
     elementoPai.classList.add("d-none");
 
@@ -188,18 +164,16 @@ function proxPerg07() {
     mostraNaTabela();
     document.querySelector(
       "#pontuacao"
-    ).innerHTML = `${somaPontuacao} - ${satisfacao}`
+    ).innerHTML = `${somaPontuacao} - ${satisfacao}`;
   } else {
     alert("Marque alguma das alternativas");
   }
 }
 
-
 function mostraNaTabela(key, valor) {
   valor = String(valor);
   console.log(key);
   console.log(valor);
-
 }
 
 function somarPontuacao() {
@@ -260,57 +234,52 @@ function voltarPerg07() {
   elementoPai.classList.add("d-none");
 }
 
-/*Grafico*/ 
+/*Grafico*/
 
-let satisfeito = 0
-let insatisfeito = 0
-let mediano = 0
+let satisfeito = 0;
+let insatisfeito = 0;
+let mediano = 0;
 
-for(let i = 0; i <= localStorage.length; i++){
+for (let i = 0; i <= localStorage.length; i++) {
+  let key = localStorage.key(i);
+  let valor = localStorage.getItem(key);
 
-  let key = localStorage.key(i)
-  let valor = localStorage.getItem(key)
+  console.log(valor);
 
-  console.log(valor)
-
-
-  if(valor == 0){
-    valor++
+  if (valor == 0) {
+    valor++;
   }
-  if(valor <=280 && valor >0){
-    insatisfeito++
-    console.log(insatisfeito)
-  }else if(valor <=420 && valor > 280){
-    mediano++
-    console.log(mediano)
-  }else if(valor>420){
-    satisfeito++
-    console.log(satisfeito)
+  if (valor <= 280 && valor > 0) {
+    insatisfeito++;
+    console.log(insatisfeito);
+  } else if (valor <= 420 && valor > 280) {
+    mediano++;
+    console.log(mediano);
+  } else if (valor > 420) {
+    satisfeito++;
+    console.log(satisfeito);
   }
-
-
-
-
 }
 
-const ctx = document.getElementById('myChart');
-                       
-                
+const ctx = document.getElementById("myChart");
+
 new Chart(ctx, {
-  type: 'bar',
+  type: "bar",
   data: {
-    labels: ['Insatisfeito', 'Serviço mediano', 'Satisfeito'],
-    datasets: [{
-      label: '# of Votes',
-      data: [insatisfeito, mediano, satisfeito],
-      borderWidth: 1
-    }]
+    labels: ["Insatisfeito", "Serviço mediano", "Satisfeito"],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [insatisfeito, mediano, satisfeito],
+        borderWidth: 1,
+      },
+    ],
   },
   options: {
     scales: {
       y: {
-        beginAtZero: true
-      }
-    }
-  }
+        beginAtZero: true,
+      },
+    },
+  },
 });
